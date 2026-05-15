@@ -1,0 +1,212 @@
+{
+  "name": "AutoDrive PLM",
+  "ecr_counter": 0,
+  "parts": [
+    {
+      "part_id": "P-1001",
+      "name": "Piston",
+      "description": "Engine piston",
+      "version": "B",
+      "status": "RELEASED",
+      "lifecycle_history": [
+        "[2026-05-15 18:38:58] Part created in PLM",
+        "[2026-05-15 18:38:58] Added to BOM of A-ENG-01 (qty 4)",
+        "[2026-05-15 18:38:58] ECR opened: ECR-001 - Upgrade piston material",
+        "[2026-05-15 18:38:58] Version: A -> B",
+        "[2026-05-15 18:38:58] Status: Concept -> In Design",
+        "[2026-05-15 18:38:58] Status: In Design -> Released",
+        "[2026-05-15 18:38:58] ECR ECR-001 APPROVED: Upgrade piston material"
+      ]
+    },
+    {
+      "part_id": "P-1002",
+      "name": "Crankshaft",
+      "description": "Engine crankshaft",
+      "version": "A",
+      "status": "CONCEPT",
+      "lifecycle_history": [
+        "[2026-05-15 18:38:58] Part created in PLM",
+        "[2026-05-15 18:38:58] Added to BOM of A-ENG-01 (qty 1)"
+      ]
+    },
+    {
+      "part_id": "P-2001",
+      "name": "Brake Pad",
+      "description": "Friction pad",
+      "version": "A",
+      "status": "CONCEPT",
+      "lifecycle_history": [
+        "[2026-05-15 18:38:58] Part created in PLM",
+        "[2026-05-15 18:38:58] Added to BOM of A-BRK-01 (qty 2)",
+        "[2026-05-15 18:38:58] ECR opened: ECR-002 - Reject trial brake pad compound",
+        "[2026-05-15 18:38:58] ECR ECR-002 REJECTED: Reject trial brake pad compound (Failed NVH test)"
+      ]
+    },
+    {
+      "part_id": "P-2002",
+      "name": "Brake Disc",
+      "description": "Rotor disc",
+      "version": "A",
+      "status": "CONCEPT",
+      "lifecycle_history": [
+        "[2026-05-15 18:38:58] Part created in PLM",
+        "[2026-05-15 18:38:58] Added to BOM of A-BRK-01 (qty 2)"
+      ]
+    },
+    {
+      "part_id": "P-3001",
+      "name": "Gear Shaft",
+      "description": "Main shaft",
+      "version": "A",
+      "status": "CONCEPT",
+      "lifecycle_history": [
+        "[2026-05-15 18:38:58] Part created in PLM",
+        "[2026-05-15 18:38:58] Added to BOM of A-GBX-01 (qty 1)"
+      ]
+    },
+    {
+      "part_id": "P-3002",
+      "name": "Gear Wheel",
+      "description": "Spur gear",
+      "version": "A",
+      "status": "CONCEPT",
+      "lifecycle_history": [
+        "[2026-05-15 18:38:58] Part created in PLM",
+        "[2026-05-15 18:38:58] Added to BOM of A-GBX-01 (qty 4)"
+      ]
+    },
+    {
+      "part_id": "A-ENG-01",
+      "name": "Engine",
+      "description": "Complete engine assembly",
+      "version": "A",
+      "status": "RELEASED",
+      "lifecycle_history": [
+        "[2026-05-15 18:38:58] Part created in PLM",
+        "[2026-05-15 18:38:58] Status: Concept -> In Design",
+        "[2026-05-15 18:38:58] Status: In Design -> Released",
+        "[2026-05-15 18:38:58] BOM structure created",
+        "[2026-05-15 18:38:58] Added to BOM of A-VEH-01 (qty 1)"
+      ]
+    },
+    {
+      "part_id": "A-BRK-01",
+      "name": "Brake System",
+      "description": "Front brake assembly",
+      "version": "A",
+      "status": "RELEASED",
+      "lifecycle_history": [
+        "[2026-05-15 18:38:58] Part created in PLM",
+        "[2026-05-15 18:38:58] Status: Concept -> In Design",
+        "[2026-05-15 18:38:58] Status: In Design -> Released",
+        "[2026-05-15 18:38:58] BOM structure created",
+        "[2026-05-15 18:38:58] Added to BOM of A-VEH-01 (qty 1)"
+      ]
+    },
+    {
+      "part_id": "A-GBX-01",
+      "name": "Gearbox",
+      "description": "Manual transmission gearbox",
+      "version": "A",
+      "status": "RELEASED",
+      "lifecycle_history": [
+        "[2026-05-15 18:38:58] Part created in PLM",
+        "[2026-05-15 18:38:58] Status: Concept -> In Design",
+        "[2026-05-15 18:38:58] Status: In Design -> Released",
+        "[2026-05-15 18:38:58] BOM structure created",
+        "[2026-05-15 18:38:58] Added to BOM of A-VEH-01 (qty 1)"
+      ]
+    },
+    {
+      "part_id": "A-VEH-01",
+      "name": "Vehicle",
+      "description": "Complete vehicle platform",
+      "version": "A",
+      "status": "RELEASED",
+      "lifecycle_history": [
+        "[2026-05-15 18:38:58] Part created in PLM",
+        "[2026-05-15 18:38:58] Status: Concept -> In Design",
+        "[2026-05-15 18:38:58] Status: In Design -> Released",
+        "[2026-05-15 18:38:58] BOM structure created"
+      ]
+    }
+  ],
+  "boms": [
+    {
+      "parent_id": "A-ENG-01",
+      "lines": [
+        {
+          "child_id": "P-1001",
+          "quantity": 4
+        },
+        {
+          "child_id": "P-1002",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "parent_id": "A-BRK-01",
+      "lines": [
+        {
+          "child_id": "P-2001",
+          "quantity": 2
+        },
+        {
+          "child_id": "P-2002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "parent_id": "A-GBX-01",
+      "lines": [
+        {
+          "child_id": "P-3001",
+          "quantity": 1
+        },
+        {
+          "child_id": "P-3002",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "parent_id": "A-VEH-01",
+      "lines": [
+        {
+          "child_id": "A-ENG-01",
+          "quantity": 1
+        },
+        {
+          "child_id": "A-BRK-01",
+          "quantity": 1
+        },
+        {
+          "child_id": "A-GBX-01",
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "ecrs": [
+    {
+      "ecr_id": "ECR-001",
+      "title": "Upgrade piston material",
+      "part_id": "P-1001",
+      "proposed_version": "B",
+      "reason": "Higher temperature rating",
+      "status": "APPROVED",
+      "created_at": "2026-05-15 18:38:58"
+    },
+    {
+      "ecr_id": "ECR-002",
+      "title": "Reject trial brake pad compound",
+      "part_id": "P-2001",
+      "proposed_version": "B",
+      "reason": "Noise during braking tests",
+      "status": "REJECTED",
+      "created_at": "2026-05-15 18:38:58"
+    }
+  ]
+}
